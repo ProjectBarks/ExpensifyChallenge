@@ -57,6 +57,8 @@ function loginToExpensify(){
          data: data,
          dataType: 'json',
          success: function(success){
+
+             success = JSON.parse(success);
              console.log(success);
              if(success.authToken)
                  setCookie("authToken",success.authToken);
