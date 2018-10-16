@@ -1,6 +1,6 @@
 <?php
 
-    if ( $_POST["authenticate"]) {
+    if ( !empty($_POST)){//["authenticate"]) {
         header('Content-Type: application/json');
         echo json_encode(["test"=>"testing"]);
         exit();
