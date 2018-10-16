@@ -2,6 +2,27 @@
 checkAuthToken();
 
 
+$("#userlogin").submit(function(event){
+
+    event.preventDefault();
+
+    var partName        = $("#partnerName").val(),
+        partPassword    = $("#partnerPassword").val(),
+        partUserID      = $("#partnerUserID").val(),
+        partUserSecret  = $("#partnerUserSecret").val();
+
+    var form = $(this),
+        url = form.attr("action");
+
+    var postRequest = loginToExpensify(partName,partPassword,partUserID,partUserSecret);
+
+    postRequest.done(function(data){
+        alert(data);
+    })
+
+
+
+});
 
 
 function setCookie(cname, cvalue) {
@@ -41,7 +62,7 @@ function checkAuthToken() {
  *              partnerUserSecret
  *  POST via https://www.expensify.com/api?command=Authenticate
  */
-function loginToExpensify(){
+function loginToExpensify(partName, partPassword, partUserID, partUserID){
 
     var data = {
          partnerName:        "applicant",
