@@ -48,20 +48,22 @@ function loginToExpensify(){
     // };
 
     console.log("User Is Attempting to Log in");
-    $.ajax({
-        type: "POST",
-        url: "./proxy.php",
-        //headers:{authenticate: true},
-        headers:{"name": "Tim"},
-        //data: data,
-        dataType: 'json',
-        success: function(success){
-            alert(success);
-        },
-        error: function(error){
-            console.log(error);
-        }
-    });
+    $.post("./proxy.php", {name:"tim"}, function(returnData){console.log(returnData)});
+
+    // $.ajax({
+    //     type: "POST",
+    //     url: "./proxy.php",
+    //     //headers:{authenticate: true},
+    //     headers:{"name": "Tim"},
+    //     //data: data,
+    //     dataType: 'json',
+    //     success: function(success){
+    //         alert(success);
+    //     },
+    //     error: function(error){
+    //         console.log(error);
+    //     }
+    // });
 }
 
 loginToExpensify();
