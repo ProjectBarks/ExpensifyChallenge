@@ -1,4 +1,7 @@
+//Perform
 checkAuthToken();
+
+
 
 
 function setCookie(cname, cvalue) {
@@ -52,16 +55,13 @@ function loginToExpensify(){
      $.ajax({
          type: "POST",
          url: "./proxy.php",
-         //headers:{authenticate: true},
+
          headers:{"name":"tim"},
          data: data,
          dataType: 'json',
          success: function(success){
 
              success = JSON.parse(success);
-             console.log(success);
-             if(success.authToken)
-                 setCookie("authToken",success.authToken);
 
              if(simpleVerifyLogin(success)){
                   console.log("Successful Request");
@@ -69,6 +69,11 @@ function loginToExpensify(){
                   console.log("There was an error in the request");
                   return;
              }
+
+             if(success.authToken) {
+                 setCookie("authToken", success.authToken);
+             }
+
          },
          error: function(error){
              console.log(error);

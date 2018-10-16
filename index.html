@@ -9,6 +9,27 @@
 <body>
 <div id="loginContent">
     <!-- Add your login form here -->
+    <form id="userlogin" action="proxy.php" title="Login" method="post">
+        <div>
+            <label class="title">Partner Name:</label>
+            <input type="text" id="partnerName" name="partnerName" >
+        </div>
+        <div>
+            <label class="title">Partner Password:</label>
+            <input type="text" id="partnerPassword" name="partnerName" >
+        </div>
+        <div>
+            <label class="title">Partner User ID:</label>
+            <input type="text" id="partnerUserID" name="partnerName" >
+        </div>
+        <div>
+            <label class="title">Partner User Secret:</label>
+            <input type="text" id="partnerUserSecret" name="partnerName" >
+        </div>
+        <div>
+            <input type="submit" id="submitButton" name="submitButton" value="Submit">
+        </div>
+    </form>
 </div>
 
 <div id="transactionTable">
