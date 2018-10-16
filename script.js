@@ -44,8 +44,7 @@ function loginToExpensify(){
          partnerName:        "applicant",
          partnerPassword:    "d7c3119c6cdab02d68d9",
          partnerUserID:      "expensifytest@mailinator.com",
-         password:           "hire_me",
-         name: "tim"
+         partnerUserSecret:  "hire_me",
      };
 
     console.log("User Is Attempting to Log in");

@@ -5,19 +5,19 @@
 //echo json_encode($_POST["name"]);
 
 if(!empty($_POST)){
-    $result = expensifyPOST($_POST["partnerName"], $_POST["partnerPassword"], $_POST['partnerUserID'], $_POST["password"]);
+    $result = expensifyPOST($_POST["partnerName"], $_POST["partnerPassword"], $_POST['partnerUserID'], $_POST["partnerUserSecret"]);
 
     echo json_encode($result);
 }
 
-    function expensifyPOST($partnerName, $partnerPassword, $partnerUserID,$password){
+    function expensifyPOST($partnerName, $partnerPassword, $partnerUserID,$partnerUserSecret){
        $url = "https://www.expensify.com/api?command=Authenticate";
 
        $fields = [
            "partnerName"        => $partnerName,
            "partnerPassword"    => $partnerPassword,
            "partnerUserID"      => $partnerUserID,
-           "password"           => $password
+           "password"           => $partnerUserSecret
        ];
 
        $fields_string = http_build_query($fields);
