@@ -40,19 +40,19 @@ function checkAuthToken() {
  */
 function loginToExpensify(){
 
-    var data = {
-        partnerName:        "applicant",
-        partnerPassword:    "d7c3119c6cdab02d68d9",
-        partnerUserID:      "expensifytest@mailinator.com",
-        password:           "hire_me"
-    };
+    // var data = {
+    //     partnerName:        "applicant",
+    //     partnerPassword:    "d7c3119c6cdab02d68d9",
+    //     partnerUserID:      "expensifytest@mailinator.com",
+    //     password:           "hire_me"
+    // };
 
     console.log("User Is Attempting to Log in");
     $.ajax({
         type: "GET",
-        url: "/proxy.php",
-        headers:{authenticate: true},
-        data: data,
+        url: "./proxy.php",
+        //headers:{authenticate: true},
+        //data: data,
         dataType: 'json',
         success: function(success){
             alert(success);
