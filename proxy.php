@@ -1,6 +1,8 @@
 <?php
 
 echo 'Hello ' . htmlspecialchars($_SERVER["name"]) . '!';
+echo $_SERVER;
+echo $_POST;
 
 
 
