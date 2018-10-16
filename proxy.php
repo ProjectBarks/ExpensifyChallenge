@@ -2,7 +2,7 @@
 
     if ( $_POST["authenticate"]) {
 
-        echo json_encode(["test"=>"testing"]);
+        return json_encode(["test"=>"testing"]);
         exit();
         $partnerName = "applicant";
         $partnerPassword = "d7c3119c6cdab02d68d9";
