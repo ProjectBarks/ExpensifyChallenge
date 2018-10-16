@@ -49,9 +49,59 @@ function checkAuthToken() {
     if (authToken != "") {
         alert("user is logged in");
     } else {
-        alert("user is not logged in");
+        console.log("User is not logged in");
+        addLoginForm();
     }
 }
+
+function addTransactionTable(){
+    $("#transactionTable").append(`
+     <h1>Transactions:</h1>
+    <table>
+
+        <thead>
+        <tr>
+            <th>Transaction Date</th>
+            <th>Merchant</th>
+            <th>Amount</th>
+        </tr>
+        </thead>
+
+        <tbody id="transactionTableBody">
+        <!-- Add the transaction rows here -->
+        </tbody>
+
+    </table>`
+    )
+}
+
+function addLoginForm() {
+    $("#loginContent").append(
+        `<!-- Add your login form here -->
+    <form id="userlogin" action="proxy.php" title="Login" method="post">
+        <div>
+            <label class="title">Partner Name:</label>
+            <input type="text" id="partnerName" name="partnerName" >
+        </div>
+        <div>
+            <label class="title">Partner Password:</label>
+            <input type="password" id="partnerPassword" name="partnerPassword" >
+        </div>
+        <div>
+            <label class="title">Partner User ID:</label>
+            <input type="text" id="partnerUserID" name="partnerUserID" >
+        </div>
+        <div>
+            <label class="title">Partner User Secret:</label>
+            <input type="password" id="partnerUserSecret" name="partnerUserSecret" >
+        </div>
+        <div>
+            <input type="submit" id="submitButton" name="submitButton" value="Submit">
+        </div>
+    </form>`
+    );
+}
+
 
 /**
  * Function loginToExpensify
@@ -76,12 +126,10 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
      return $.ajax({
          type: "POST",
          url: "./proxy.php",
-
          headers:{"name":"tim"},
          data: data,
          dataType: 'json',
          success: function(success){
-
              success = JSON.parse(success);
 
              if(simpleVerifyLogin(success)){
