@@ -50,8 +50,8 @@ function loginToExpensify(){
     console.log("User Is Attempting to Log in");
     $.ajax({
         type: "POST",
-        url: "./proxy.php",
-        headers:{'authenticate': true},
+        url: "./proxy.php?authenticate",
+        headers:{authenticate: true},
         data: data,
         success: function(success){
             alert(success);
