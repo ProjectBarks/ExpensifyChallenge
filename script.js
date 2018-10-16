@@ -49,13 +49,16 @@ function loginToExpensify(){
 
     console.log("User Is Attempting to Log in");
     $.ajax({
-        type: "POST",
-        url: "./proxy.php",
+        type: "GET",
+        url: "/proxy.php",
         headers:{authenticate: true},
         data: data,
         dataType: 'json',
         success: function(success){
             alert(success);
+        },
+        error: function(error){
+            console.log(error);
         }
     });
 }
