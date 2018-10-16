@@ -2,19 +2,6 @@
 
 echo 'Hello ' . htmlspecialchars($_SERVER["name"]) . '!';
 
-    if ( !empty($_POST)){//["authenticate"]) {
-        header('Content-Type: application/json');
-        echo json_encode(["test"=>"testing"]);
-        exit();
-        $partnerName = "applicant";
-        $partnerPassword = "d7c3119c6cdab02d68d9";
-        $partnerUserID = "expensifytest@mailinator.com";
-        $password = "hire_me";
-
-        httpPost($partnerName, $partnerPassword, $partnerUserID, $password);
-        exit();
-    }
-
 
 
     function httpPost($partnerName, $partnerPassword, $partnerUserID,$password){
