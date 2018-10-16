@@ -1,6 +1,6 @@
 <?php
 
-echo 'Hello ' . htmlspecialchars($_SERVER["HTTP_name"]) . '!';
+echo 'Hello ' . $_POST["name"] . '!';
 //echo json_encode($_SERVER);
 echo json_encode($_POST["name"]);
 
