@@ -17,7 +17,7 @@ if(!empty($_POST)){
            "partnerName"        => $partnerName,
            "partnerPassword"    => $partnerPassword,
            "partnerUserID"      => $partnerUserID,
-           "password"           => $partnerUserSecret
+           "partnerUserSecret"  => $partnerUserSecret
        ];
 
        $fields_string = http_build_query($fields);
