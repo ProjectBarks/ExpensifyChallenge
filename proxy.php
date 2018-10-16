@@ -1,8 +1,8 @@
 <?php
 
     if ( $_POST["authenticate"]) {
-
-        return json_encode(["test"=>"testing"]);
+        header('Content-Type: application/json');
+        echo json_encode(["test"=>"testing"]);
         exit();
         $partnerName = "applicant";
         $partnerPassword = "d7c3119c6cdab02d68d9";
