@@ -71,12 +71,12 @@ function loginToExpensify(){
 }
 
 function simpleVerifyLogin(success){
-    return  success.accountID   !== null &&
-            success.authToken   !== null &&
-            success.email       !== null &&
-            success.httpCode    === 200  &&
-            success.jsonCode    === 200  &&
-            success.requestID   !== null;
+    return  success["accountID"]!== null &&
+            success["authToken"]!== null &&
+            success["email"]!== null &&
+            success["httpCode"]=== 200  &&
+            success["jsonCode"]=== 200  &&
+            success["requestID"]!== null;
 
 }
 
