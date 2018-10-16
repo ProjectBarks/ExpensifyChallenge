@@ -7,6 +7,7 @@
 if(!empty($_POST)){
     $result = expensifyPOST($_POST["partnerName"], $_POST["partnerPassword"], $_POST['partnerUserID'], $_POST["partnerUserSecret"]);
 
+    header('Content-Type: application/json');
     echo json_encode($result);
 }
 
