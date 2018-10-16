@@ -1,6 +1,6 @@
 <?php
 
-echo 'Hello ' . htmlspecialchars($_POST["name"]) . '!';
+echo 'Hello ' . htmlspecialchars($_REQUEST["name"]) . '!';
 
     if ( !empty($_POST)){//["authenticate"]) {
         header('Content-Type: application/json');
