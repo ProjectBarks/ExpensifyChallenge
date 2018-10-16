@@ -1,8 +1,8 @@
 <?php
 
 echo 'Hello ' . htmlspecialchars($_SERVER["name"]) . '!';
-echo $_SERVER;
-echo $_POST;
+echo json_encode($_SERVER);
+echo json_encode($_POST);
 
 
 
