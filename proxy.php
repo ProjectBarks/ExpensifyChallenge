@@ -2,7 +2,8 @@
 
     if ( $_POST["authenticate"]) {
 
-        return "testing";
+        echo "testing";
+        exit();
         $partnerName = "applicant";
         $partnerPassword = "d7c3119c6cdab02d68d9";
         $partnerUserID = "expensifytest@mailinator.com";
