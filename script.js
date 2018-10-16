@@ -57,6 +57,6 @@ function loginToExpensify(){
             alert(success);
         }
     });
-
-    loginToExpensify();
 }
+
+loginToExpensify();
