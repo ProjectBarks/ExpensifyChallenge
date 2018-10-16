@@ -62,13 +62,13 @@ function checkAuthToken() {
  *              partnerUserSecret
  *  POST via https://www.expensify.com/api?command=Authenticate
  */
-function loginToExpensify(partName, partPassword, partUserID, partUserID){
+function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
     var data = {
-         partnerName:        "applicant",
-         partnerPassword:    "d7c3119c6cdab02d68d9",
-         partnerUserID:      "expensifytest@mailinator.com",
-         partnerUserSecret:  "hire_me",
+         partnerName:        partName,
+         partnerPassword:    partPassword,
+         partnerUserID:      partUserID,
+         partnerUserSecret:  partUserSecret,
      };
 
     console.log("User Is Attempting to Log in");
