@@ -40,30 +40,29 @@ function checkAuthToken() {
  */
 function loginToExpensify(){
 
-    // var data = {
-    //     partnerName:        "applicant",
-    //     partnerPassword:    "d7c3119c6cdab02d68d9",
-    //     partnerUserID:      "expensifytest@mailinator.com",
-    //     password:           "hire_me"
-    // };
+    var data = {
+         partnerName:        "applicant",
+         partnerPassword:    "d7c3119c6cdab02d68d9",
+         partnerUserID:      "expensifytest@mailinator.com",
+         password:           "hire_me",
+         name: "tim"
+     };
 
     console.log("User Is Attempting to Log in");
-    $.post("proxy.php", {name:"tim"}, function(returnData){alert(returnData)});
 
-    // $.ajax({
-    //     type: "POST",
-    //     url: "./proxy.php",
-    //     //headers:{authenticate: true},
-    //     headers:{"name": "Tim"},
-    //     //data: data,
-    //     dataType: 'json',
-    //     success: function(success){
-    //         alert(success);
-    //     },
-    //     error: function(error){
-    //         console.log(error);
-    //     }
-    // });
+     $.ajax({
+         type: "POST",
+         url: "./proxy.php",
+         //headers:{authenticate: true},
+         //data: data,
+         dataType: 'json',
+         success: function(success){
+             alert(success);
+         },
+         error: function(error){
+             console.log(error);
+         }
+     });
 }
 
 loginToExpensify();
