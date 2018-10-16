@@ -57,6 +57,7 @@ function loginToExpensify(){
          data: data,
          dataType: 'json',
          success: function(success){
+             console.log(success);
              if(simpleVerifyLogin(success)){
                  console.log("Successful Request");
              } else {
