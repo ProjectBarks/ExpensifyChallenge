@@ -17,7 +17,9 @@ $("#userlogin").submit(function(event){
     var postRequest = loginToExpensify(partName,partPassword,partUserID,partUserSecret);
 
     postRequest.done(function(data){
-        alert(data);
+        removeLoginForm();
+        addTransactionTable();
+        //alert(data);
     })
 
 
@@ -47,12 +49,16 @@ function getCookie(cname) {
 function checkAuthToken() {
     var authToken = getCookie("authToken");
     if (authToken != "") {
-        alert("user is logged in");
+        console.log("User is logged in");
+        addTransactionTable();
+
     } else {
         console.log("User is not logged in");
         addLoginForm();
     }
 }
+
+
 
 function addTransactionTable(){
     $("#transactionTable").append(`
@@ -100,6 +106,10 @@ function addLoginForm() {
         </div>
     </form>`
     );
+}
+
+function removeLoginForm(){
+    $("#loginContent").remove();
 }
 
 
