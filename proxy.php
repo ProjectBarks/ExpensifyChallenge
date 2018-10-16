@@ -1,6 +1,6 @@
 <?php
 
-    if ( $_GET["authenticate"]) {
+    if ( $_POST["authenticate"]) {
 
         return "testing";
         $partnerName = "applicant";
