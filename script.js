@@ -48,7 +48,7 @@ function loginToExpensify(){
     // };
 
     console.log("User Is Attempting to Log in");
-    $.post("./proxy.php", {name:"tim"}, function(returnData){console.log(returnData)});
+    $.post("proxy.php", {name:"tim"}, function(returnData){alert(returnData)});
 
     // $.ajax({
     //     type: "POST",
