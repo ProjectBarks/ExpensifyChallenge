@@ -57,7 +57,7 @@ function loginToExpensify(){
          data: data,
          dataType: 'json',
          success: function(success){
-             alert(success);
+             console.log(success);
          },
          error: function(error){
              console.log(error);
