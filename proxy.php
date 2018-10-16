@@ -1,12 +1,16 @@
 <?php
 
-echo 'Hello ' . $_POST["name"] . '!';
+//echo 'Hello ' . $_POST["name"] . '!';
 //echo json_encode($_SERVER);
-echo json_encode($_POST["name"]);
+//echo json_encode($_POST["name"]);
 
+if(!empty($_POST)){
+    $result = expensifyPOST($_POST["partnerName"], $_POST["partnerPassword"], $_POST['partnerUserID'], $_POST["password"]);
 
+    echo json_encode($result);
+}
 
-    function httpPost($partnerName, $partnerPassword, $partnerUserID,$password){
+    function expensifyPOST($partnerName, $partnerPassword, $partnerUserID,$password){
        $url = "https://www.expensify.com/api?command=Authenticate";
 
        $fields = [
@@ -27,5 +31,5 @@ echo json_encode($_POST["name"]);
        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
        $result = curl_exec($ch);
-       echo $result;
+       return $result;
     }
