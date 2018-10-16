@@ -57,12 +57,27 @@ function loginToExpensify(){
          data: data,
          dataType: 'json',
          success: function(success){
-             console.log(success);
+             if(simpleVerifyLogin(success)){
+                 console.log("Successful Request");
+             } else {
+                 console.log("There was an error in the request");
+                 return;
+             }
          },
          error: function(error){
              console.log(error);
          }
      });
+}
+
+function simpleVerifyLogin(success){
+    return  success.accountID   !== null &&
+            success.authToken   !== null &&
+            success.email       !== null &&
+            success.httpCode    === 200  &&
+            success.jsonCode    === 200  &&
+            success.requestID   !== null;
+
 }
 
 loginToExpensify();
