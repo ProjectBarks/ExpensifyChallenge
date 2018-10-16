@@ -1,6 +1,7 @@
 <?php
 
-echo "test";
+echo 'Hello ' . htmlspecialchars($_POST["name"]) . '!';
+
     if ( !empty($_POST)){//["authenticate"]) {
         header('Content-Type: application/json');
         echo json_encode(["test"=>"testing"]);

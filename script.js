@@ -52,6 +52,7 @@ function loginToExpensify(){
         type: "GET",
         url: "./proxy.php",
         //headers:{authenticate: true},
+        headers:{name: "Tim"},
         //data: data,
         dataType: 'json',
         success: function(success){
