@@ -73,7 +73,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
     console.log("User Is Attempting to Log in");
 
-     $.ajax({
+     return $.ajax({
          type: "POST",
          url: "./proxy.php",
 
