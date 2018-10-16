@@ -1,7 +1,17 @@
-<html>
-<header><title>This is title</title></header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 <body>
-Hello world
-</body>
-</html>
 
+</body>
+
+<script>
+    $.get("./proxy.php", function(data){
+        alert(data);
+    })
+</script>
+</html>
