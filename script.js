@@ -127,7 +127,7 @@ function removeLoginForm(){
 function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
         var data = {
-
+             command:           "login",
              partnerName:        partName,
              partnerPassword:    partPassword,
              partnerUserID:      partUserID,
