@@ -226,5 +226,6 @@ function recursiveWrite(dataLeft, finalString){
 }
 
 function pullRequiredFields(row){
-    return "<tr><td>"+row.created+"</td><td >"+row.merchant+"</td><td>"+row.amount+"</td></tr>";
+    return "<tr><td style='overflow:hidden'>"+row.created+"</td><td style='overflow:hidden'>"+row.merchant+
+        "</td><td style='overflow:hidden'>"+row.amount+"</td></tr>";
 }
