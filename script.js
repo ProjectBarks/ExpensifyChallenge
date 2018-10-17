@@ -151,11 +151,18 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
                      removeLoginForm();
 
+                     if($('#errorMessage').length){
+                         removeErrorMessage();
+                     }
+
                      addTransactionTable();
 
                  } else {
                       console.log("There was an error in the request");
-                      $("#loginContent").append(success.message);
+                      if($('#errorMessage').length){
+                          removeErrorMessage();
+                      }
+                      $("#loginContent").append("<div id='errorMessage'>"+success.message+"</div>");
                       return;
                  }
 
@@ -168,6 +175,10 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                  console.log(error);
              }
          });
+    }
+
+    function removeErrorMessage(){
+        $("#loginContent").remove();
     }
 
 function simpleVerifyLogin(success){
