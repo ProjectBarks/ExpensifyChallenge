@@ -161,7 +161,8 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                       if($('#errorMessage').length){
                           removeErrorMessage();
                       }
-                      $("#loginContent").append("<div id='errorMessage'>"+success.message+"</div>");
+                      $("#loginContent").append("<div id='errorMessage'>"+
+                          success.message.substr(success.message.indexOf(" "))+"</div>");
                       return;
                  }
 
@@ -199,7 +200,6 @@ function getTransactionList(){
             dataType: 'json',
             success: function(success){
                 console.log("fetching transaction list");
-                console.log(JSON.parse(success).transactionList);
                 writeDataToTable(JSON.parse(success).transactionList);
             },
             error: function(error){
