@@ -288,7 +288,7 @@ function createTransaction(create, amt, merch){
                     var message = JSON.parse(error).message;
                 }
 
-                $('#createTransaction').append("<div>"+
+                $('#createTransaction').append("<div id='errorMessage'>"+
                     success.message.substr(success.message.indexOf(" "))+"</div>");
 
 
