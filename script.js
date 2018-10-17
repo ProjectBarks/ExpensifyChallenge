@@ -161,7 +161,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                       if($('#errorMessage').length){
                           removeErrorMessage();
                       }
-                      $("#loginContent").append("<div id='errorMessage'>"+
+                      $("#loginContent").append("<div id='errorMessage'>Error: "+
                           success.message.substr(success.message.indexOf(" "))+"</div>");
                  }
 
