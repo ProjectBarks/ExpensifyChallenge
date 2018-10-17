@@ -1,3 +1,8 @@
 body {
     background: red;
 }
+
+#merchant{
+    width: 200px;
+    overflow-x: scroll;
+}

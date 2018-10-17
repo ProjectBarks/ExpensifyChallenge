@@ -67,9 +67,9 @@ function addTransactionTable(){
 
         <thead>
         <tr>
-            <th>Transaction Date</th>
-            <th>Merchant</th>
-            <th>Amount</th>
+            <th id="transactionDate">Transaction Date</th>
+            <th id="merchant">Merchant</th>
+            <th id="amount">Amount</th>
         </tr>
         </thead>
 
@@ -204,7 +204,7 @@ function writeDataToTable(data){
 
     for (i=0,j=data.length; i<j; i+=chunk) {
         temparray = data.slice(i,i+chunk);
-        console.log(recursiveWrite(temparray, ""));
+        recursiveWrite(temparray, "");
         console.log("inserting to table");
 
 
