@@ -4,4 +4,6 @@ body {
 
 #transactionTable{
     width: 600px;
+    height: 600px;
+    overflow-y: scroll;
 }
