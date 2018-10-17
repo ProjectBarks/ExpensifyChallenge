@@ -233,4 +233,3 @@ function pullRequiredFields(row){
         "</tr>";
 }
 
-border: 1px solid black;text-align:center;
