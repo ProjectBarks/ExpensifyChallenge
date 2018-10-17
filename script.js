@@ -199,16 +199,17 @@ function getTransactionList(){
     }
 
 function writeDataToTable(data){
-
+    console.log("building insert");
     var insertToTable = recursiveWrite(data, "");
 
+    console.log("inserting to table");
     $("#transactionTable").append(insertToTable);
 
 
 }
 var i = 0;
 function recursiveWrite(dataLeft, finalString){
-    console.write(i++);
+    console.log(i++);
     if(dataLeft.length == 0)
         return finalString;
     var row = dataLeft.shift();
