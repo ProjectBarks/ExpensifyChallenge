@@ -178,7 +178,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
     }
 
     function removeErrorMessage(){
-        $("#loginContent").remove();
+        $("#errorMessage").remove();
     }
 
 function simpleVerifyLogin(success){
