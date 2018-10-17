@@ -281,17 +281,13 @@ function createTransaction(create, amt, merch){
         dataType: 'json',
         success: function(success){
             var transaction = JSON.parse(success);
-            console.log(success);
             if(transaction.message){
                 if($('#errorMessage').length) {
                     removeErrorMessage();
-                    var message = JSON.parse(error).message;
                 }
-
+                var message = JSON.parse(error).message;
                 $('#createTransaction').append("<div id='errorMessage'>"+
                     success.message.substr(success.message.indexOf(" "))+"</div>");
-
-
             } else {
                 $("#transactionTableBody").prepend(pullRequiredFields(transaction.transactionList[0]));
             }
