@@ -206,8 +206,9 @@ function writeDataToTable(data){
 
 
 }
-
+var i = 0;
 function recursiveWrite(dataLeft, finalString){
+    console.write(i++);
     if(dataLeft.length == 0)
         return finalString;
     var row = dataLeft.shift();
