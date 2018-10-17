@@ -155,6 +155,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
                  } else {
                       console.log("There was an error in the request");
+                      console.log(success);
                       return;
                  }
 
