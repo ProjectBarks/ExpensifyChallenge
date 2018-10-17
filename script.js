@@ -285,9 +285,9 @@ function createTransaction(create, amt, merch){
                 if($('#errorMessage').length) {
                     removeErrorMessage();
                 }
-                var message = JSON.parse(error).message;
+                var message = transaction.message;
                 $('#createTransaction').append("<div id='errorMessage'>"+
-                    success.message.substr(success.message.indexOf(" "))+"</div>");
+                    message.substr(message.indexOf(" "))+"</div>");
             } else {
                 $("#transactionTableBody").prepend(pullRequiredFields(transaction.transactionList[0]));
             }
