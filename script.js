@@ -17,8 +17,7 @@ $("#userlogin").submit(function(event){
     var postRequest = loginToExpensify(partName,partPassword,partUserID,partUserSecret);
 
     postRequest.done(function(data){
-        removeLoginForm();
-        addTransactionTable();
+
         //alert(data);
     })
 
@@ -144,6 +143,13 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
              if(simpleVerifyLogin(success)){
                   console.log("Successful Request");
+
+                 removeLoginForm();
+
+                 addTransactionTable();
+
+
+
              } else {
                   console.log("There was an error in the request");
                   return;
