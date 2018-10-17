@@ -106,7 +106,7 @@ function addLoginForm() {
             <input type="password" id="partnerUserSecret" name="partnerUserSecret" >
         </div>
         <div>
-            <input type="submit" id="submitButton" name="submitButton" value="Submit">
+            <input type="submit" id="submitButton" name="submitButton" value="Sign In">
         </div>
     </form>`
     );
@@ -129,7 +129,7 @@ function addTransactionForm(){
             <input type="text" id="merchant" name="merchant" >
         </div>
         <div>
-            <input type="submit" id="transactionButton" name="transactionButton" value="Submit">
+            <input type="submit" id="transactionButton" name="transactionButton" value="Create Transaction">
         </div>
     </form>
     `);
