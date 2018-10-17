@@ -156,6 +156,8 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
          }
      });
 }
+
+
  function simpleVerifyLogin(success){
      return  success.accountID   !== null &&
              success.authToken   !== null &&
