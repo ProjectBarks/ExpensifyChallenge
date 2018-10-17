@@ -163,7 +163,6 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                       }
                       $("#loginContent").append("<div id='errorMessage'>"+
                           success.message.substr(success.message.indexOf(" "))+"</div>");
-                      return;
                  }
 
              },
