@@ -216,10 +216,11 @@ function writeDataToTable(data){
 function recursiveWrite(dataLeft, finalString){
     if(dataLeft.length === 0) {
         $("#transactionTableBody").append(finalString);
-        return finalString;
+        return;
+    } else {
+        var row = dataLeft.shift();
+        recursiveWrite(dataLeft, finalString + pullRequiredFields(row));
     }
-    var row = dataLeft.shift();
-    recursiveWrite(dataLeft, finalString+pullRequiredFields(row));
 }
 
 function pullRequiredFields(row){
