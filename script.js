@@ -18,6 +18,17 @@ $("#userlogin").submit(function(event){
 
 });
 
+$("#transactionForm").submit(function(event){
+   event.preventDefault();
+    var rValueList  = $("#return-value-list").val(),
+        sDate       = $("#start-date").val(),
+        eDate       = $("#end-date").val(),
+        Lim         = $('#limit').val(),
+        Oset        = $('#offset').val();
+
+   getTransactionList(rValueList, sDate, eDate, Lim, Oset);
+});
+
 
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";" + ";path=/";
@@ -108,17 +119,20 @@ function removeLoginForm(){
 function addTransactionForm(){
     $("#transactionForm").append(
         ` <form id="transaction-form">
+            <p>Return Value List</p>
+            <input type="text" name="return-value-list">
+            
             <p>Start Date</p>
-            <input type="date" name="startDate">
+            <input type="date" name="start-date">
     
             <p>End Date</p>
-            <input type="date" name="endDate">
+            <input type="date" name="end-date">
     
             <p>Limit</p>
-            <input type="number" name="Limit">
+            <input type="number" name="limit">
     
             <p>Offset</p>
-            <input type="number" name="Offset">
+            <input type="number" name="offset">
     
             <button type="submit" name="transaction-submit"> Find </button>
         </form>`
