@@ -67,9 +67,9 @@ function addTransactionTable(){
 
         <thead>
         <tr>
-            <th id="transactionDate">Transaction Date</th>
-            <th id="merchant">Merchant</th>
-            <th id="amount">Amount</th>
+            <th class="transactionDate">Transaction Date</th>
+            <th class="merchant">Merchant</th>
+            <th class="amount">Amount</th>
         </tr>
         </thead>
 
@@ -224,5 +224,5 @@ function recursiveWrite(dataLeft, finalString){
 }
 
 function pullRequiredFields(row){
-    return "<tr><td>"+row.created+"</td><td>"+row.merchant+"</td><td>"+row.amount+"</td></tr>";
+    return "<tr><td class='transactionDate'>"+row.created+"</td><td class='merchant'>"+row.merchant+"</td><td class='amount'>"+row.amount+"</td></tr>";
 }
