@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53d6720-2aba-4895-a5b6-b8def27fad0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy.php" beforeDir="false" afterPath="$PROJECT_DIR$/proxy.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,14 +40,14 @@
         <counts>
           <entry key="html" value="844" />
           <entry key="js" value="4218" />
-          <entry key="php" value="2322" />
+          <entry key="php" value="2406" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="853" />
           <entry key="JavaScript" value="4209" />
-          <entry key="PHP" value="2322" />
+          <entry key="PHP" value="2406" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -69,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -89,17 +90,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proxy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="253">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding>
                 <element signature="e#243#400#0#PHP" />
                 <element signature="n#loginToExpensify#0;n#!!top" />
                 <element signature="e#1222#1420#0#PHP" />
                 <element signature="n#getTransactionList#0;n#!!top" />
-                <element signature="e#1254#1352#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -133,9 +133,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/proxy.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/script.js" />
+        <option value="$PROJECT_DIR$/proxy.php" />
       </list>
     </option>
   </component>
@@ -206,12 +206,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539716758258</updated>
       <workItem from="1539716759392" duration="12423000" />
-      <workItem from="1539795424372" duration="4084000" />
+      <workItem from="1539795424372" duration="4383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16507000" />
+    <option name="totallyTimeSpent" value="16806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -269,20 +269,6 @@
     <entry file="file://$PROJECT_DIR$/styles.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/proxy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#243#400#0#PHP" />
-            <element signature="n#loginToExpensify#0;n#!!top" />
-            <element signature="e#1222#1420#0#PHP" />
-            <element signature="n#getTransactionList#0;n#!!top" />
-            <element signature="e#1254#1352#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -304,6 +290,19 @@
             <element signature="n#!!doc;n#loginToExpensify#0" />
             <element signature="n#!!block;n#loginToExpensify#0" />
             <element signature="n#!!block;n#simpleVerifyLogin#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#243#400#0#PHP" />
+            <element signature="n#loginToExpensify#0;n#!!top" />
+            <element signature="e#1222#1420#0#PHP" />
+            <element signature="n#getTransactionList#0;n#!!top" />
           </folding>
         </state>
       </provider>

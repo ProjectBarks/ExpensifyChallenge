@@ -6,6 +6,12 @@ if(!empty($_POST)){
     echo json_encode($result);
 }
 
+if(!empty($_GET)){
+    $result = getTransactionList($_GET["authToken"], $_GET["returnValueList"]);
+    header('Content-Type: application/json');
+    echo json_encode($result);
+}
+
 /**
  * Function loginToExpensify
  * Goal:    to send a POST request to expensify's API
@@ -52,25 +58,13 @@ function loginToExpensify($partnerName, $partnerPassword, $partnerUserID,$partne
  * @param null $offset
  * @return mixed, typically returns a JSON response with `transaction` as a key.
  */
-function getTransactionList($authToken, $returnValueList, $startDate=null, $endDate=null,$limit=null,$offset=null){
+function getTransactionList($authToken, $returnValueList){
     $url = "https://www.expensify.com/api?command=Get";
 
     $fields = [
-        "authToken"        => $authToken,
-        "returnValueList"    => $returnValueList
+        "authToken"             => $authToken,
+        "returnValueList"       => $returnValueList
     ];
-
-    if(!is_null($startDate))
-        $fields['startDate'] = $startDate;
-
-    if(!is_null($endDate))
-        $fields['endDate']  = $endDate;
-
-    if(!is_null($limit))
-        $fields['Limit']    = $limit;
-
-    if(!is_null($offset))
-        $fields['Offset']   = $offset;
 
     $ch = curl_init();
 
