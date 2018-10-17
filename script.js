@@ -157,6 +157,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                      }
 
                      addTransactionTable();
+                     getTransactionList();
 
                  } else {
                       console.log("There was an error in the request");
@@ -178,9 +179,9 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
          });
     }
 
-    function removeErrorMessage(){
-        $("#errorMessage").remove();
-    }
+function removeErrorMessage(){
+    $("#errorMessage").remove();
+}
 
 function simpleVerifyLogin(success){
          return  success.accountID   !== null &&
