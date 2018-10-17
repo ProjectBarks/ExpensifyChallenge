@@ -49,7 +49,9 @@ function checkAuthToken() {
     if (authToken != "") {
         console.log("User is logged in");
         addTransactionTable();
+        addTransactionForm();
         getTransactionList();
+
 
     } else {
         console.log("User is not logged in");
@@ -61,7 +63,8 @@ function checkAuthToken() {
 
 
 function addTransactionTable(){
-    $("#transactionTable").append(`
+    $("body").append(`
+<div id="transactionTable">
      <h1>Transactions:</h1>
     <table>
 
@@ -80,13 +83,23 @@ function addTransactionTable(){
         <!-- Add the transaction rows here -->
         </tbody>
 
-    </table>`
+    </table>
+</div>`
     )
+}
+
+function addTransactionForm(){
+    $("body").append(`
+    <div id="transactionForm">
+
+    </div>
+    `)
 }
 
 function addLoginForm() {
     $("#loginContent").append(
         `<!-- Add your login form here -->
+<div id="loginContent">
     <form id="userlogin" action="proxy.php" title="Login" method="post">
         <div>
             <label class="title">Partner Name:</label>
@@ -107,7 +120,8 @@ function addLoginForm() {
         <div>
             <input type="submit" id="submitButton" name="submitButton" value="Submit">
         </div>
-    </form>`
+    </form>
+</div>`
     );
 }
 
