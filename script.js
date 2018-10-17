@@ -190,7 +190,7 @@ function getTransactionList(){
             dataType: 'json',
             success: function(success){
                 console.log(JSON.parse(success).transactionList);
-                //writeDataToTable(JSON.parse(JSON.parse(success).transactionList));
+                writeDataToTable(JSON.parse(success).transactionList);
             },
             error: function(error){
                 console.log(error)
