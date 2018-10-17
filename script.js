@@ -207,7 +207,7 @@ function writeDataToTable(data){
         console.log(recursiveWrite(temparray, ""));
         console.log("inserting to table");
 
-        $("#transactionTableBody").append(insert);
+
     }
 
 
@@ -215,7 +215,7 @@ function writeDataToTable(data){
 
 function recursiveWrite(dataLeft, finalString){
     if(dataLeft.length === 0) {
-        console.log(finalString);
+        $("#transactionTableBody").append(finalString);
         return finalString;
     }
     var row = dataLeft.shift();
