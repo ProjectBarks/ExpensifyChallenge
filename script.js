@@ -218,7 +218,6 @@ function writeDataToTable(data){
 function recursiveWrite(dataLeft, finalString){
     if(dataLeft.length === 0) {
         $("#transactionTableBody").append(finalString);
-        $("td").width(200);
         return;
     } else {
         var row = dataLeft.shift();
