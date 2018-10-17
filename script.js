@@ -281,7 +281,7 @@ function createTransaction(create, amt, merch){
         dataType: 'json',
         success: function(success){
             var transaction = JSON.parse(success);
-
+            console.log(success);
             if(transaction.message){
                 if($('#errorMessage').length) {
                     removeErrorMessage();
