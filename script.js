@@ -28,8 +28,6 @@ $("#transactionForm").submit(function(event){
    createTransaction(created, amount, merchant);
 });
 
-
-
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";" + ";path=/";
 }
@@ -282,17 +280,28 @@ function createTransaction(create, amt, merch){
         data: data,
         dataType: 'json',
         success: function(success){
-            console.log(success);
             var transaction = JSON.parse(success);
-            $("#transactionTableBody").prepend(pullRequiredFields(transaction.transactionList[0]));
+
+            if(transaction.message){
+                if($('#errorMessage').length) {
+                    removeErrorMessage();
+                    var message = JSON.parse(error).message;
+                }
+
+                $('#createTransaction').append("<div>"+
+                    success.message.substr(success.message.indexOf(" "))+"</div>");
+
+
+            } else {
+                $("#transactionTableBody").prepend(pullRequiredFields(transaction.transactionList[0]));
+            }
         },
         error: function(error){
-        console.log(error)
+            console.log(error);
         }
     });
 
 }
-
 
 function addLoggedInFunctions(){
     addTransactionTable();
