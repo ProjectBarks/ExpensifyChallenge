@@ -204,9 +204,9 @@ function writeDataToTable(data){
 
     for (i=0,j=data.length; i<j; i+=chunk) {
         temparray = data.slice(i,i+chunk);
-        var insert = recursiveWrite(temparray, "");
+        console.log(recursiveWrite(temparray, ""));
         console.log("inserting to table");
-        console.log(insert);
+
         $("#transactionTableBody").append(insert);
     }
 
