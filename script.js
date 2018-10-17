@@ -214,11 +214,11 @@ function writeDataToTable(data){
 
 function recursiveWrite(dataLeft, finalString){
     if(dataLeft.length === 0) {
-        console.log(finalString);
+        //console.log(finalString);
         return finalString;
     }
     var row = dataLeft.shift();
-    recursiveWrite(dataLeft, finalString+row);
+    recursiveWrite(dataLeft, finalString+pullRequiredFields(row));
 }
 
 function pullRequiredFields(row){
