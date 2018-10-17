@@ -287,8 +287,11 @@ function createTransaction(create, amt, merch){
                 }
                 var message = transaction.message;
                 $('#createTransaction').append("<div id='errorMessage'>"+
-                    message.substr(message.indexOf(" "))+"</div>");
+                    message+", please check that all fields are filled in.</div>");
             } else {
+                if($('#errorMessage').length) {
+                    removeErrorMessage();
+                }
                 $("#transactionTableBody").prepend(pullRequiredFields(transaction.transactionList[0]));
             }
         },
