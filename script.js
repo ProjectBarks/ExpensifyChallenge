@@ -285,8 +285,7 @@ function createTransaction(create, amt, merch){
             console.log(success);
             var transaction = JSON.parse(success);
             console.log(transaction.transactionList);
-            console.log(JSON.parse(transaction.transactionList));
-            $("#transactionTableBody").prepend(pullRequiredFields(transaction.transactionList));
+            $("#transactionTableBody").prepend(pullRequiredFields(transaction.transactionList[0]));
         },
         error: function(error){
         console.log(error)
