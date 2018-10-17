@@ -146,6 +146,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                  if(simpleVerifyLogin(success)){
                       console.log("Successful Request");
 
+                     setCookie("authToken", success.authToken);
                      removeLoginForm();
 
                      if($('#errorMessage').length){
