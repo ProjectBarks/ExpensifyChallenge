@@ -82,6 +82,7 @@ function addTransactionTable(){
 
     </table>`
     )
+    $("#transactionTable").css({"width":"600px", "height":"600px", "overflow-y":"scroll"});
 }
 
 function addLoginForm() {
