@@ -28,6 +28,11 @@ $("#transactionForm").submit(function(event){
    createTransaction(created, amount, merchant);
 });
 
+$("#signOut").on("click", function(event){
+    event.preventDefault();
+    logout();
+});
+
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";" + ";path=/";
 }
@@ -135,8 +140,20 @@ function addTransactionForm(){
     `);
 }
 
+function addSignOutButton(){
+    $(document.body).append("<div><button id='signOut'>Sign Out</button></div>")
+}
+
 function removeLoginForm(){
     $("#loginContent").remove();
+}
+
+function removeTransactionForm(){
+    $('#transactionForm').remove();
+}
+
+function removeTransactionTable(){
+    $("#transactionTable").remove();
 }
 
 //LOGIN FUNCTIONS
@@ -210,8 +227,15 @@ function simpleVerifyLogin(success){
                  success.requestID   !== null;
      }
 
- //TRANSACTION FUNCTIONS
+ function logout(){
+    setCookie("authToken", "");
+     removeTransactionForm();
+     removeTransactionTable();
+     addLoginForm();
 
+ }
+
+ //TRANSACTION FUNCTIONS
 function getTransactionList(){
         var data = {
             authToken: getCookie("authToken"),
@@ -306,5 +330,6 @@ function addLoggedInFunctions(){
     addTransactionTable();
     addTransactionForm();
     getTransactionList();
+    addSignOutButton();
 }
 
