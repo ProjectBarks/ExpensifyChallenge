@@ -3,3 +3,7 @@ body {
 }
 
 td {width: 200px}
+
+#transactionTable{
+    width: 600px;
+}
