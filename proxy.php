@@ -1,9 +1,16 @@
 <?php
 
 if(!empty($_POST)){
-    $result = loginToExpensify($_POST["partnerName"], $_POST["partnerPassword"], $_POST['partnerUserID'], $_POST["partnerUserSecret"]);
-    header('Content-Type: application/json');
-    echo json_encode($result);
+    if($_POST['command'] == "login") {
+        $result = loginToExpensify($_POST["partnerName"], $_POST["partnerPassword"], $_POST['partnerUserID'], $_POST["partnerUserSecret"]);
+        header('Content-Type: application/json');
+        echo json_encode($result);
+    }
+    else if($_POST['command'] =="createTransaction"){
+        $result = createTransaction($_POST['authToken'],$_POST['created'], $_POST['amount'], $_POST['merchant']);
+        header('Content-Type: application/json');
+        echo json_encode($result);
+    }
 }
 
 if(!empty($_GET)){
@@ -46,6 +53,38 @@ function loginToExpensify($partnerName, $partnerPassword, $partnerUserID,$partne
    return $result;
 }
 
+/**
+ * Function createTransaction
+ * Goal:    to allow the user to create a transaction
+ * @param $authToken
+ * @param $created
+ * @param $amount
+ * @param $merchant
+ * @return mixed
+ */
+function createTransaction($authToken, $created, $amount, $merchant){
+    $url = "https://www.expensify.com/api?command=CreateTransaction";
+
+    $fields = [
+        "authToken"     => $authToken,
+        "created"       => $created,
+        "amount"        => $amount,
+        "merchant"      => $merchant
+    ];
+
+    $fields_string = http_build_query($fields);
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, count($fields));
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $result = curl_exec($ch);
+    return $result;
+}
 
 /**
  * Function getTransactionList
