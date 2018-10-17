@@ -283,6 +283,8 @@ function createTransaction(create, amt, merch){
         dataType: 'json',
         success: function(success){
             console.log(success);
+            var transaction = JSON.parse(success);
+            $("#transactionTable").prepend(pullRequiredFields(transaction.transactionList));
         },
         error: function(error){
         console.log(error)
