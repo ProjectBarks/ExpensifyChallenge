@@ -20,13 +20,8 @@ $("#userlogin").submit(function(event){
 
 $("#transactionForm").submit(function(event){
    event.preventDefault();
-    var rValueList  = $("#return-value-list").val(),
-        sDate       = $("#start-date").val(),
-        eDate       = $("#end-date").val(),
-        Lim         = $('#limit').val(),
-        Oset        = $('#offset').val();
 
-   getTransactionList(rValueList, sDate, eDate, Lim, Oset);
+   getTransactionList();
 });
 
 
@@ -54,11 +49,12 @@ function checkAuthToken() {
     if (authToken != "") {
         console.log("User is logged in");
         addTransactionTable();
-        addTransactionForm();
+        getTransactionList();
 
     } else {
         console.log("User is not logged in");
         addLoginForm();
+
     }
 }
 
@@ -116,28 +112,6 @@ function removeLoginForm(){
     $("#loginContent").remove();
 }
 
-function addTransactionForm(){
-    $("#transactionForm").append(
-        ` <form id="transaction-form">
-            <p>Return Value List</p>
-            <input type="text" name="return-value-list">
-            
-            <p>Start Date</p>
-            <input type="date" name="start-date">
-    
-            <p>End Date</p>
-            <input type="date" name="end-date">
-    
-            <p>Limit</p>
-            <input type="number" name="limit">
-    
-            <p>Offset</p>
-            <input type="number" name="offset">
-    
-            <button type="submit" name="transaction-submit"> Find </button>
-        </form>`
-    )
-}
 
 //LOGIN FUNCTIONS
 
@@ -204,21 +178,11 @@ function simpleVerifyLogin(success){
 
  //TRANSACTION FUNCTIONS
 
-function getTransactionList(rValueList, sDate=null,eDate=null,Lim=null,Oset=null){
+function getTransactionList(){
         var data = {
             authToken: getCookie("authToken"),
-            returnValueList: rValueList,
+            returnValueList: "transactionList",
         };
-
-        if(sDate !=null)
-            data.push({key: "startDate", value: sDate});
-        if(eDate != null)
-            data.push({key:"endDate", value: eDate});
-        if(Lim != null)
-            data.push({key:"Limit", value: Lim});
-        if(Oset != null)
-            data.push({key: "Offset", value: Oset});
-
         return $.ajax({
             type: "GET",
             url: "./proxy.php",
