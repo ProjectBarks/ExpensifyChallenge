@@ -206,7 +206,7 @@ function writeDataToTable(data){
         temparray = data.slice(i,i+chunk);
         var insert = recursiveWrite(temparray, "");
         console.log("inserting to table");
-        $("#transactionTable").append(insert);
+        $("#transactionTableBody").append(insert);
     }
 
 
@@ -214,7 +214,7 @@ function writeDataToTable(data){
 
 function recursiveWrite(dataLeft, finalString){
     if(dataLeft.length === 0) {
-        //console.log(finalString);
+        console.log(finalString);
         return finalString;
     }
     var row = dataLeft.shift();
