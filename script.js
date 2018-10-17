@@ -189,8 +189,8 @@ function getTransactionList(){
             data: data,
             dataType: 'json',
             success: function(success){
-                //console.log(success)
-                writeDataToTable(JSON.parse(JSON.parse(success).transactionList));
+                console.log(JSON.parse(success));
+                //writeDataToTable(JSON.parse(JSON.parse(success).transactionList));
             },
             error: function(error){
                 console.log(error)
