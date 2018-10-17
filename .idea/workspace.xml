@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+            <state relative-caret-position="230">
+              <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
               <folding>
                 <element signature="e#68#596#0" />
                 <element signature="n#!!block;n#setCookie#0" />
@@ -73,7 +73,6 @@
                 <element signature="n#!!block;n#addLoginForm#0" />
                 <element signature="n#!!block;n#removeLoginForm#0" />
                 <element signature="n#!!doc;n#loginToExpensify#0" />
-                <element signature="n#!!block;n#loginToExpensify#0" />
                 <element signature="n#!!block;n#simpleVerifyLogin#0" />
               </folding>
             </state>
@@ -116,6 +115,7 @@
     <findStrings>
       <find>addLoginForm</find>
       <find>loginTo</find>
+      <find>user is attempting</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -198,12 +198,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539716758258</updated>
       <workItem from="1539716759392" duration="12423000" />
-      <workItem from="1539795424372" duration="689000" />
+      <workItem from="1539795424372" duration="789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13112000" />
+    <option name="totallyTimeSpent" value="13212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -277,8 +277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+        <state relative-caret-position="230">
+          <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
           <folding>
             <element signature="e#68#596#0" />
             <element signature="n#!!block;n#setCookie#0" />
@@ -287,7 +287,6 @@
             <element signature="n#!!block;n#addLoginForm#0" />
             <element signature="n#!!block;n#removeLoginForm#0" />
             <element signature="n#!!doc;n#loginToExpensify#0" />
-            <element signature="n#!!block;n#loginToExpensify#0" />
             <element signature="n#!!block;n#simpleVerifyLogin#0" />
           </folding>
         </state>
