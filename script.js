@@ -63,7 +63,7 @@ function checkAuthToken() {
 
 
 function addTransactionTable(){
-    $("body").append(`
+    $(document.body).append(`
 <div id="transactionTable">
      <h1>Transactions:</h1>
     <table>
@@ -89,7 +89,7 @@ function addTransactionTable(){
 }
 
 function addTransactionForm(){
-    $("body").append(`
+    $(document.body).append(`
     <div id="transactionForm">
 
     </div>
@@ -97,7 +97,7 @@ function addTransactionForm(){
 }
 
 function addLoginForm() {
-    $("#loginContent").append(
+    $(document.body).append(
         `<!-- Add your login form here -->
 <div id="loginContent">
     <form id="userlogin" action="proxy.php" title="Login" method="post">
