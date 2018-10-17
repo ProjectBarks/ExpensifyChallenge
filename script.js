@@ -58,8 +58,6 @@ function checkAuthToken() {
     }
 }
 
-
-
 function addTransactionTable(){
     $("#transactionTable").append(`
      <h1>Transactions:</h1>
@@ -116,9 +114,7 @@ function removeLoginForm(){
     $("#loginContent").remove();
 }
 
-
 //LOGIN FUNCTIONS
-
 /**
      * Function loginToExpensify
      * Goal:    to allow the user to log in to the Expensify API.
@@ -192,7 +188,6 @@ function simpleVerifyLogin(success){
                  success.requestID   !== null;
      }
 
-
  //TRANSACTION FUNCTIONS
 
 function getTransactionList(){
@@ -206,6 +201,7 @@ function getTransactionList(){
             data: data,
             dataType: 'json',
             success: function(success){
+                console.log("fetching transaction list");
                 console.log(JSON.parse(success).transactionList);
                 writeDataToTable(JSON.parse(success).transactionList);
             },
