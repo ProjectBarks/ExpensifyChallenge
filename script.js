@@ -16,13 +16,6 @@ $("#userlogin").submit(function(event){
 
     var postRequest = loginToExpensify(partName,partPassword,partUserID,partUserSecret);
 
-    postRequest.done(function(data){
-
-        //alert(data);
-    })
-
-
-
 });
 
 
@@ -148,8 +141,6 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
                  addTransactionTable();
 
-
-
              } else {
                   console.log("There was an error in the request");
                   return;
@@ -173,5 +164,3 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
              success.jsonCode    === 200  &&
              success.requestID   !== null;
  }
-
-loginToExpensify();
