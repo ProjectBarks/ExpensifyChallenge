@@ -200,16 +200,19 @@ function getTransactionList(){
 
 function writeDataToTable(data){
     console.log("building insert");
-    var insertToTable = recursiveWrite(data, "");
+    var i,j,temparray,chunk = 100;
 
-    console.log("inserting to table");
-    $("#transactionTable").append(insertToTable);
+    for (i=0,j=data.length; i<j; i+=chunk) {
+        temparray = data.slice(i,i+chunk);
+        var insert = recursiveWrite(temparray, "");
+        console.log("inserting to table");
+        $("#transactionTable").append(insert);
+    }
 
 
 }
-var i = 0;
+
 function recursiveWrite(dataLeft, finalString){
-    console.log(i++);
     if(dataLeft.length == 0)
         return finalString;
     var row = dataLeft.shift();
