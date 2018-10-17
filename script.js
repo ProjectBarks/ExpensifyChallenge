@@ -21,8 +21,13 @@ $("#userlogin").submit(function(event){
 $("#transactionForm").submit(function(event){
    event.preventDefault();
 
-   getTransactionList();
+   var  created     = $("#created").val(),
+        amount      = $("#amount").val(),
+        merchant    = $("#merchant").val();
+
+   createTransaction(created, amount, merchant);
 });
+
 
 
 function setCookie(cname, cvalue) {
@@ -48,8 +53,7 @@ function checkAuthToken() {
     var authToken = getCookie("authToken");
     if (authToken != "") {
         console.log("User is logged in");
-        addTransactionTable();
-        getTransactionList();
+        addLoggedInFunctions();
 
     } else {
         console.log("User is not logged in");
@@ -110,6 +114,29 @@ function addLoginForm() {
     );
 }
 
+function addTransactionForm(){
+    $('#transactionForm').append(`
+    <h2>Create A Transaction</h2>
+    <form id="createTransaction" action="proxy.php" title="Login" method="post">
+        <div>
+            <label class="title">Created:</label>
+            <input type="date" id="created" name="created" >
+        </div>
+        <div>
+            <label class="title">Amount:</label>
+            <input type="number" id="amount" name="amount" >
+        </div>
+        <div>
+            <label class="title">Merchant:</label>
+            <input type="text" id="merchant" name="merchant" >
+        </div>
+        <div>
+            <input type="submit" id="transactionButton" name="transactionButton" value="Submit">
+        </div>
+    </form>
+    `);
+}
+
 function removeLoginForm(){
     $("#loginContent").remove();
 }
@@ -154,8 +181,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                          removeErrorMessage();
                      }
 
-                     addTransactionTable();
-                     getTransactionList();
+                     addLoggedInFunctions();
 
                  } else {
                       console.log("There was an error in the request");
@@ -238,5 +264,37 @@ function pullRequiredFields(row){
         "<td style='max-width: 200px;border: 1px solid black;text-align:center;'>"+row.merchant+ "</td>"+
         "<td style='max-width: 200px;border: 1px solid black;text-align:center;'>"+row.amount+"</td>" +
         "</tr>";
+}
+
+function createTransaction(create, amt, merch){
+    var data = {
+        command:        "createTransaction",
+        authToken:      getCookie("authToken"),
+        created:        create,
+        amount:         amt,
+        merchant:       merch
+    };
+    console.log("User Is Creating a Transaction");
+
+    return $.ajax({
+        type: "POST",
+        url: "./proxy.php",
+        data: data,
+        dataType: 'json',
+        success: function(success){
+            console.log(success);
+        },
+        error: function(error){
+        console.log(error)
+        }
+    });
+
+}
+
+
+function addLoggedInFunctions(){
+    addTransactionTable();
+    addTransactionForm();
+    getTransactionList();
 }
 

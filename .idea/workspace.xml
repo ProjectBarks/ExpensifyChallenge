@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f53d6720-2aba-4895-a5b6-b8def27fad0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +41,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="267" />
-          <entry key="html" value="978" />
-          <entry key="js" value="6334" />
+          <entry key="html" value="1010" />
+          <entry key="js" value="6885" />
           <entry key="php" value="2808" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="267" />
-          <entry key="HTML" value="1011" />
-          <entry key="JavaScript" value="6301" />
+          <entry key="HTML" value="1043" />
+          <entry key="JavaScript" value="6852" />
           <entry key="PHP" value="2808" />
         </counts>
       </usages-collector>
@@ -64,26 +65,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="36" column="79" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="108" selection-end-column="11" />
+            <state relative-caret-position="230">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
                 <element signature="e#68#468#0" />
                 <element signature="n#!!block;n#setCookie#0" />
                 <element signature="n#!!block;n#getCookie#0" />
                 <element signature="n#!!block;n#checkAuthToken#0" />
                 <element signature="n#!!block;n#addTransactionTable#0" />
+                <element signature="n#!!block;n#addLoginForm#0" />
+                <element signature="n#!!block;n#addTransactionForm#0" />
                 <element signature="n#!!block;n#removeLoginForm#0" />
                 <element signature="n#!!doc;n#loginToExpensify#0" />
                 <element signature="n#!!block;n#loginToExpensify#0" />
@@ -96,6 +99,8 @@
                 <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#createTransaction#0" />
+                <element signature="n#!!block;n#addLoggedInFunctions#0" />
               </folding>
             </state>
           </provider>
@@ -156,8 +161,8 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/styles.css" />
         <option value="$PROJECT_DIR$/proxy.php" />
-        <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/script.js" />
       </list>
     </option>
   </component>
@@ -229,12 +234,12 @@
       <updated>1539716758258</updated>
       <workItem from="1539716759392" duration="12423000" />
       <workItem from="1539795424372" duration="9064000" />
-      <workItem from="1539814420499" duration="3790000" />
+      <workItem from="1539814420499" duration="4205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25277000" />
+    <option name="totallyTimeSpent" value="25692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="927" height="1055" extended-state="4" />
@@ -289,13 +294,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proxy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -314,16 +312,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="108" selection-end-column="11" />
+        <state relative-caret-position="230">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
             <element signature="e#68#468#0" />
             <element signature="n#!!block;n#setCookie#0" />
             <element signature="n#!!block;n#getCookie#0" />
             <element signature="n#!!block;n#checkAuthToken#0" />
             <element signature="n#!!block;n#addTransactionTable#0" />
+            <element signature="n#!!block;n#addLoginForm#0" />
+            <element signature="n#!!block;n#addTransactionForm#0" />
             <element signature="n#!!block;n#removeLoginForm#0" />
             <element signature="n#!!doc;n#loginToExpensify#0" />
             <element signature="n#!!block;n#loginToExpensify#0" />
@@ -336,14 +350,9 @@
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#createTransaction#0" />
+            <element signature="n#!!block;n#addLoggedInFunctions#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="36" column="79" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
         </state>
       </provider>
     </entry>
