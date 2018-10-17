@@ -2,17 +2,3 @@ body {
     background: red;
 }
 
-.merchant{
-    width: 200px;
-    overflow-x: scroll;
-}
-
-.amount{
-    width: 200px;
-    overflow-x: scroll;
-}
-
-.transactionDate{
-    width: 200px;
-    overflow-x: scroll;
-}

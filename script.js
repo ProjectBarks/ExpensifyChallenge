@@ -66,6 +66,9 @@ function addTransactionTable(){
     <table>
 
         <thead>
+          <col width="200">
+          <col width="200">
+          <col width="200">
         <tr>
             <th class="transactionDate">Transaction Date</th>
             <th class="merchant">Merchant</th>
