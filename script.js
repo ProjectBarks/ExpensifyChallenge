@@ -189,10 +189,31 @@ function getTransactionList(){
             data: data,
             dataType: 'json',
             success: function(success){
-                console.log(success)
+                //console.log(success)
+                writeDataToTable(JSON.parse(JSON.parse(success).transactionList));
             },
             error: function(error){
                 console.log(error)
             }
         });
     }
+
+function writeDataToTable(data){
+
+    var insertToTable = recursiveWrite(data, "");
+
+    $("#transactionTable").append(insertToTable);
+
+
+}
+
+function recursiveWrite(dataLeft, finalString){
+    if(dataLeft.length == 0)
+        return finalString;
+    var row = dataLeft.shift();
+    recursiveWrite(dataLeft, finalString+row);
+}
+
+function pullRequiredFields(row){
+    return "<tr><td>"+row.created+"</td><td>"+row.merchant+"</td><td>"+row.amount+"</td></tr>";
+}
