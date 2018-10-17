@@ -229,7 +229,7 @@ function pullRequiredFields(row){
     return "<tr>" +
         "<td style='max-width: 200px;border: 1px solid black;text-align:center;'>"+row.created+"</td>"+
         "<td style='max-width: 200px;border: 1px solid black;text-align:center;'>"+row.merchant+ "</td>"+
-        "<td style='max-width: 200pxborder: 1px solid black;text-align:center;'>"+row.amount+"</td>" +
+        "<td style='max-width: 200px;border: 1px solid black;text-align:center;'>"+row.amount+"</td>" +
         "</tr>";
 }
 
