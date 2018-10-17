@@ -49,9 +49,7 @@ function checkAuthToken() {
     if (authToken != "") {
         console.log("User is logged in");
         addTransactionTable();
-        addTransactionForm();
         getTransactionList();
-
 
     } else {
         console.log("User is not logged in");
@@ -63,8 +61,7 @@ function checkAuthToken() {
 
 
 function addTransactionTable(){
-    $(document.body).append(`
-<div id="transactionTable">
+    $("#transactionTable").append(`
      <h1>Transactions:</h1>
     <table>
 
@@ -83,23 +80,13 @@ function addTransactionTable(){
         <!-- Add the transaction rows here -->
         </tbody>
 
-    </table>
-</div>`
+    </table>`
     )
 }
 
-function addTransactionForm(){
-    $(document.body).append(`
-    <div id="transactionForm">
-
-    </div>
-    `)
-}
-
 function addLoginForm() {
-    $(document.body).append(
+    $("#loginContent").append(
         `<!-- Add your login form here -->
-<div id="loginContent">
     <form id="userlogin" action="proxy.php" title="Login" method="post">
         <div>
             <label class="title">Partner Name:</label>
@@ -120,8 +107,7 @@ function addLoginForm() {
         <div>
             <input type="submit" id="submitButton" name="submitButton" value="Submit">
         </div>
-    </form>
-</div>`
+    </form>`
     );
 }
 
@@ -169,7 +155,7 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
 
                  } else {
                       console.log("There was an error in the request");
-                      console.log(success);
+                      $("#loginContent").append(success.message);
                       return;
                  }
 
