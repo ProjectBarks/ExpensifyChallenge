@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="148" column="63" selection-start-line="148" selection-start-column="63" selection-end-line="148" selection-end-column="63" />
+            <state relative-caret-position="104">
+              <caret line="165" column="18" selection-start-line="165" selection-start-column="18" selection-end-line="165" selection-end-column="18" />
               <folding>
                 <element signature="e#68#468#0" />
                 <element signature="n#!!block;n#setCookie#0" />
@@ -136,6 +136,7 @@
       <find>addLoginForm</find>
       <find>loginTo</find>
       <find>user is attempting</find>
+      <find>setCookie</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,12 +221,12 @@
       <updated>1539716758258</updated>
       <workItem from="1539716759392" duration="12423000" />
       <workItem from="1539795424372" duration="9064000" />
-      <workItem from="1539814420499" duration="1600000" />
+      <workItem from="1539814420499" duration="1639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23087000" />
+    <option name="totallyTimeSpent" value="23126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -307,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="148" column="63" selection-start-line="148" selection-start-column="63" selection-end-line="148" selection-end-column="63" />
+        <state relative-caret-position="104">
+          <caret line="165" column="18" selection-start-line="165" selection-start-column="18" selection-end-line="165" selection-end-column="18" />
           <folding>
             <element signature="e#68#468#0" />
             <element signature="n#!!block;n#setCookie#0" />

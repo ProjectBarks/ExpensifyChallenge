@@ -165,10 +165,6 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
                       return;
                  }
 
-                 if(success.authToken) {
-                     setCookie("authToken", success.authToken);
-                 }
-
              },
              error: function(error){
                  console.log(error);
