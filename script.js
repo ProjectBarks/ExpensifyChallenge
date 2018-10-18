@@ -62,6 +62,10 @@ function checkAuthToken() {
 }
 
 function addTransactionTable(){
+    if($("#transactionTable").length == 0) {
+        $(document.body).append("<div id='transactionTable'></div>")
+    }
+
     $("#transactionTable").append(`
      <h1>Transactions:</h1>
     <table>
@@ -120,6 +124,10 @@ function addLoginForm() {
 }
 
 function addTransactionForm(){
+    if($("#transactionForm").length == 0) {
+        $(document.body).append("<div id='transactionForm'></div>")
+    }
+
     $('#transactionForm').append(`
     <h2>Create A Transaction</h2>
     <form id="createTransaction" action="proxy.php" title="Login" method="post">
