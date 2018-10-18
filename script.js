@@ -28,7 +28,7 @@ $("#transactionForm").submit(function(event){
    createTransaction(created, amount, merchant);
 });
 
-$(document.body).on("click", '#signOut', function(event){
+$('#signOut').on("click", function(event){
     event.preventDefault();
     logout();
 });
@@ -141,11 +141,11 @@ function addTransactionForm(){
 }
 
 function addSignOutButton(){
-    $(document.body).append("<div id='signOutDiv'><button id='signOut'>Sign Out</button></div>")
+    $(document.body).append("<div><button id='signOut'>Sign Out</button></div>")
 }
 
 function removeSignOutButton(){
-    $('#signOutDiv').remove();
+    $('#signOutDiv').parent().remove();
 }
 
 function removeLoginForm(){
