@@ -141,11 +141,11 @@ function addTransactionForm(){
 }
 
 function addSignOutButton(){
-    $(document.body).append("<div><button id='signOut'>Sign Out</button></div>")
+    $(document.body).append("<button id='signOut'>Sign Out</button>")
 }
 
 function removeSignOutButton(){
-    $('#signOutDiv').parent().remove();
+    $('#signOut').remove();
 }
 
 function removeLoginForm(){
