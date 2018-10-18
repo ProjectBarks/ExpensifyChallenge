@@ -28,10 +28,9 @@ $("#transactionForm").submit(function(event){
    createTransaction(created, amount, merchant);
 });
 
-$("#signOut").on("click", function(event){
+$(document.body).on("click", '#signOut', function(event){
     event.preventDefault();
     logout();
-    removeSignOutButton();
 });
 
 function setCookie(cname, cvalue) {
@@ -237,6 +236,7 @@ function simpleVerifyLogin(success){
      removeTransactionForm();
      removeTransactionTable();
      addLoginForm();
+     removeSignOutButton();
 
  }
 
