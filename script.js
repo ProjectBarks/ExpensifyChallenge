@@ -292,7 +292,7 @@ function getTransactionList(){
             dataType: 'json',
             success: function(success){
                 console.log("fetching transaction list");
-                console.log(JSON.parse(success).length);
+                console.log(JSON.parse(success).transactionList.length);
                 let t0 = performance.now();
                 writeDataToTable(JSON.parse(success).transactionList);
                 let t1 = performance.now();
