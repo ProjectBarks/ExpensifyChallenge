@@ -311,7 +311,7 @@ function getTransactionList(){
  */
 function writeDataToTable(data){
     console.log("building insert");
-    var i,j,temparray,chunk = 10000;
+    var i,j,temparray,chunk = 1;
     // 0 takes 175 ms.
     // 100 takes 261 ms.
     // 500 takes 271 ms.
