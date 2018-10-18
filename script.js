@@ -31,6 +31,7 @@ $("#transactionForm").submit(function(event){
 $("#signOut").on("click", function(event){
     event.preventDefault();
     logout();
+    removeSignOutButton();
 });
 
 function setCookie(cname, cvalue) {
@@ -141,7 +142,11 @@ function addTransactionForm(){
 }
 
 function addSignOutButton(){
-    $(document.body).append("<div><button id='signOut'>Sign Out</button></div>")
+    $(document.body).append("<div id='signOutDiv'><button id='signOut'>Sign Out</button></div>")
+}
+
+function removeSignOutButton(){
+    $('#signOutDiv').remove();
 }
 
 function removeLoginForm(){
