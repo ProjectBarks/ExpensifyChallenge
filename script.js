@@ -311,7 +311,7 @@ function getTransactionList(){
  */
 function writeDataToTable(data){
     console.log("building insert");
-    var i,j,temparray,chunk = 500;
+    var i,j,temparray,chunk = 100;
 
     for (i=0,j=data.length; i<j; i+=chunk) {
         temparray = data.slice(i,i+chunk);
