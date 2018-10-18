@@ -28,10 +28,6 @@ $("#transactionForm").submit(function(event){
    createTransaction(created, amount, merchant);
 });
 
-$('#signOut').on("click", function(event){
-    event.preventDefault();
-    logout();
-});
 
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";" + ";path=/";
@@ -141,7 +137,13 @@ function addTransactionForm(){
 }
 
 function addSignOutButton(){
-    $(document.body).append("<button id='signOut'>Sign Out</button>")
+    $(document.body).append("<button id='signOut'>Sign Out</button>");
+
+
+    $('#signOut').on("click", function(event){
+        event.preventDefault();
+        logout();
+    });
 }
 
 function removeSignOutButton(){
