@@ -314,13 +314,14 @@ function writeDataToTable(data){
     var i,j,temparray,chunk = 1000;
     // 100 takes 261 ms.
     // 500 takes 271 ms.
+    // 1000 takes 180 ms.
 
-    for (i=0,j=data.length; i<j; i+=chunk) {
-        temparray = data.slice(i,i+chunk);
-        recursiveWrite(temparray, "");
+    //for (i=0,j=data.length; i<j; i+=chunk) {
+    //    temparray = data.slice(i,i+chunk);
+        recursiveWrite(data, "");
         console.log("inserting to table");
 
-    }
+    //}
 
 
 }
