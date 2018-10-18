@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f53d6720-2aba-4895-a5b6-b8def27fad0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-    </list>
+    <list default="true" id="f53d6720-2aba-4895-a5b6-b8def27fad0d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,30 +74,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="289" column="35" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
+            <state relative-caret-position="175">
+              <caret line="143" column="30" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
               <folding>
                 <element signature="e#68#468#0" />
                 <element signature="e#516#572#0" />
-                <element signature="n#!!block;n#setCookie#0" />
-                <element signature="n#!!block;n#getCookie#0" />
-                <element signature="n#!!block;n#checkAuthToken#0" />
-                <element signature="n#!!block;n#addTransactionTable#0" />
-                <element signature="n#!!block;n#addLoginForm#0" />
-                <element signature="n#!!block;n#addTransactionForm#0" />
-                <element signature="n#!!block;n#removeLoginForm#0" />
-                <element signature="n#!!doc;n#loginToExpensify#0" />
-                <element signature="n#!!block;n#loginToExpensify#0" />
-                <element signature="n#!!block;n#removeErrorMessage#0" />
-                <element signature="n#!!block;n#simpleVerifyLogin#0" />
-                <element signature="n#!!block;n#getTransactionList#0" />
-                <element signature="n#!!block;n#writeDataToTable#0" />
-                <element signature="n#!!block;n#recursiveWrite#0" />
-                <element signature="n#!!block;n#pullRequiredFields#0" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#!!block;n#addLoggedInFunctions#0" />
               </folding>
             </state>
           </provider>
@@ -174,7 +156,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="927" />
@@ -238,10 +220,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27196000" />
+    <option name="totallyTimeSpent" value="27380000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.4290579" />
@@ -257,7 +239,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32502708" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -327,30 +309,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="289" column="35" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
+        <state relative-caret-position="175">
+          <caret line="143" column="30" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
           <folding>
             <element signature="e#68#468#0" />
             <element signature="e#516#572#0" />
-            <element signature="n#!!block;n#setCookie#0" />
-            <element signature="n#!!block;n#getCookie#0" />
-            <element signature="n#!!block;n#checkAuthToken#0" />
-            <element signature="n#!!block;n#addTransactionTable#0" />
-            <element signature="n#!!block;n#addLoginForm#0" />
-            <element signature="n#!!block;n#addTransactionForm#0" />
-            <element signature="n#!!block;n#removeLoginForm#0" />
-            <element signature="n#!!doc;n#loginToExpensify#0" />
-            <element signature="n#!!block;n#loginToExpensify#0" />
-            <element signature="n#!!block;n#removeErrorMessage#0" />
-            <element signature="n#!!block;n#simpleVerifyLogin#0" />
-            <element signature="n#!!block;n#getTransactionList#0" />
-            <element signature="n#!!block;n#writeDataToTable#0" />
-            <element signature="n#!!block;n#recursiveWrite#0" />
-            <element signature="n#!!block;n#pullRequiredFields#0" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#addLoggedInFunctions#0" />
           </folding>
         </state>
       </provider>
