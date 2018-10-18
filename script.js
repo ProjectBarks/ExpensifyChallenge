@@ -1,7 +1,11 @@
-//Perform
+//Perform on startup
 checkAuthToken();
 
-
+/**
+ * Event:   On UserLogin Submit
+ * Goal:    to log the user into the Expensify API. This will return a variety of information.
+ *          Find the information in loginToExpensify.
+ */
 $("#userlogin").submit(function(event){
 
     event.preventDefault();
@@ -14,10 +18,14 @@ $("#userlogin").submit(function(event){
     var form = $(this),
         url = form.attr("action");
 
-    var postRequest = loginToExpensify(partName,partPassword,partUserID,partUserSecret);
+    loginToExpensify(partName,partPassword,partUserID,partUserSecret);
 
 });
 
+/**
+ * Event: transactionForm Submit
+ * Goal:    to submit a request to the Expensify API via createTransaction.
+ */
 $("#transactionForm").submit(function(event){
    event.preventDefault();
 
@@ -28,10 +36,23 @@ $("#transactionForm").submit(function(event){
    createTransaction(created, amount, merchant);
 });
 
+//COOKIE FUNCTIONS
+/**
+ * Function setCookie
+ * Goal:    to allow the storage of programmer defined cookies
+ * @param cname
+ * @param cvalue
+ */
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";" + ";path=/";
 }
 
+/**
+ * Function getCookie
+ * Goal:    to retrieve the cookie from memory
+ * @param cname
+ * @returns {string}
+ */
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -47,6 +68,11 @@ function getCookie(cname) {
     return "";
 }
 
+/**
+ * Function checkAuthToken
+ * Goal:    to handle the authentication and add necessary login forms
+ *
+ **/
 function checkAuthToken() {
     var authToken = getCookie("authToken");
     if (authToken != "") {
@@ -60,6 +86,11 @@ function checkAuthToken() {
     }
 }
 
+//ADD | REMOVE ELEMENT FUNCTIONS
+/**
+ * Function addTransactionTable
+ * Goal:    to add the transactionTable to the document
+ */
 function addTransactionTable(){
     $("#transactionTable").append(`
      <h1>Transactions:</h1>
@@ -85,6 +116,10 @@ function addTransactionTable(){
     $("#transactionTable").css({"width":"600px", "height":"600px", "overflow-y":"scroll"});
 }
 
+/**
+ * Function addLoginForm
+ * Goal:    to add the login form to the document
+ */
 function addLoginForm() {
     $("#loginContent").append(
         `<!-- Add your login form here -->
@@ -112,6 +147,10 @@ function addLoginForm() {
     );
 }
 
+/**
+ * Function addTransactionForm
+ * Goal:    to add the transaction form to the document
+ */
 function addTransactionForm(){
     $('#transactionForm').append(`
     <h2>Create A Transaction</h2>
@@ -135,8 +174,30 @@ function addTransactionForm(){
     `);
 }
 
+/**
+ * Function removeLoginForm
+ * Goal:    to remove the loginForm div
+ */
 function removeLoginForm(){
     $("#loginContent").remove();
+}
+
+/**
+ * Function removeErrorMessage
+ * Goal:    remove the errorMessage div
+ */
+function removeErrorMessage(){
+    $("#errorMessage").remove();
+}
+
+/**
+ * Function addLoggedInFunctions
+ * Goal:    to add the necessary functions if the user is logged in.
+ */
+function addLoggedInFunctions(){
+    addTransactionTable();
+    addTransactionForm();
+    getTransactionList();
 }
 
 //LOGIN FUNCTIONS
@@ -197,10 +258,12 @@ function loginToExpensify(partName, partPassword, partUserID, partUserSecret){
          });
     }
 
-function removeErrorMessage(){
-    $("#errorMessage").remove();
-}
-
+/**
+ * Function simpleVerifyLogin
+ * Goal:    to verify the user logging in
+ * @param success
+ * @returns {boolean}
+ */
 function simpleVerifyLogin(success){
          return  success.accountID   !== null &&
                  success.authToken   !== null &&
@@ -212,6 +275,11 @@ function simpleVerifyLogin(success){
 
  //TRANSACTION FUNCTIONS
 
+/**
+ * Function getTransactionList
+ * Goal:    to call the Expensify API to retrieve the user's transaction List.
+ * @returns {*}
+ */
 function getTransactionList(){
         var data = {
             authToken: getCookie("authToken"),
@@ -232,6 +300,12 @@ function getTransactionList(){
         });
     }
 
+/**
+ * Function writeDataToTable
+ * Goal:    this function is called when the user is to add the transaction list to the
+ *          document.
+ * @param data
+ */
 function writeDataToTable(data){
     console.log("building insert");
     var i,j,temparray,chunk = 500;
@@ -246,16 +320,26 @@ function writeDataToTable(data){
 
 }
 
+/**
+ * Function recursiveWrite
+ * Goal:    to tail-recursively concatenate strings to add them to the transactionTableBody.
+ * @param dataLeft
+ * @param finalString
+ */
 function recursiveWrite(dataLeft, finalString){
     if(dataLeft.length === 0) {
         $("#transactionTableBody").append(finalString);
-        return;
     } else {
-        var row = dataLeft.shift();
-        recursiveWrite(dataLeft, finalString + pullRequiredFields(row));
+        recursiveWrite(dataLeft, finalString + pullRequiredFields(dataLeft.shift()));
     }
 }
 
+/**
+ * Function pullRequiredFields
+ * Goal:    to pull necessary fields and format them into table cells
+ * @param row
+ * @returns {string}
+ */
 function pullRequiredFields(row){
     return "<tr>" +
         "<td style='max-width: 200px;border: 1px solid black;text-align:center;'>"+row.created+"</td>"+
@@ -264,8 +348,16 @@ function pullRequiredFields(row){
         "</tr>";
 }
 
+/**
+ * Function createTransaction
+ * Goal:    to create the transaction according to Expensify's API
+ * @param create
+ * @param amt
+ * @param merch
+ * @returns {*}
+ */
 function createTransaction(create, amt, merch){
-    var data = {
+    let data = {
         command:        "createTransaction",
         authToken:      getCookie("authToken"),
         created:        create,
@@ -280,12 +372,12 @@ function createTransaction(create, amt, merch){
         data: data,
         dataType: 'json',
         success: function(success){
-            var transaction = JSON.parse(success);
+            let transaction = JSON.parse(success);
             if(transaction.message){
                 if($('#errorMessage').length) {
                     removeErrorMessage();
                 }
-                var message = transaction.message;
+                let message = transaction.message;
                 $('#createTransaction').append("<div id='errorMessage'>"+
                     message.substr(message.indexOf(" "))+"</div>");
             } else {
@@ -298,10 +390,3 @@ function createTransaction(create, amt, merch){
     });
 
 }
-
-function addLoggedInFunctions(){
-    addTransactionTable();
-    addTransactionForm();
-    getTransactionList();
-}
-

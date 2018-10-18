@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f53d6720-2aba-4895-a5b6-b8def27fad0d" name="Default Changelist" comment="" />
+    <list default="true" id="f53d6720-2aba-4895-a5b6-b8def27fad0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +18,8 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,7 +42,7 @@
         <counts>
           <entry key="css" value="267" />
           <entry key="html" value="1010" />
-          <entry key="js" value="7398" />
+          <entry key="js" value="9310" />
           <entry key="php" value="2808" />
         </counts>
       </usages-collector>
@@ -47,7 +50,7 @@
         <counts>
           <entry key="CSS" value="267" />
           <entry key="HTML" value="1043" />
-          <entry key="JavaScript" value="7365" />
+          <entry key="JavaScript" value="9277" />
           <entry key="PHP" value="2808" />
         </counts>
       </usages-collector>
@@ -65,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="506">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -74,14 +77,48 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="143" column="30" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
               <folding>
+                <element signature="e#30#98#0" />
                 <element signature="e#68#468#0" />
-                <element signature="e#516#572#0" />
+                <element signature="e#643#683#0" />
+                <element signature="e#516#726#0" />
+                <element signature="n#!!doc;n#setCookie#0" />
+                <element signature="n#!!block;n#setCookie#0" />
+                <element signature="n#!!doc;n#getCookie#0" />
+                <element signature="n#!!block;n#getCookie#0" />
+                <element signature="n#!!doc;n#checkAuthToken#0" />
+                <element signature="n#!!block;n#checkAuthToken#0" />
+                <element signature="n#!!doc;n#addTransactionTable#0" />
+                <element signature="n#!!block;n#addTransactionTable#0" />
+                <element signature="n#!!doc;n#addLoginForm#0" />
+                <element signature="n#!!block;n#addLoginForm#0" />
+                <element signature="n#!!doc;n#addTransactionForm#0" />
+                <element signature="n#!!block;n#addTransactionForm#0" />
+                <element signature="n#!!doc;n#removeLoginForm#0" />
+                <element signature="n#!!block;n#removeLoginForm#0" />
+                <element signature="n#!!doc;n#removeErrorMessage#0" />
+                <element signature="n#!!block;n#removeErrorMessage#0" />
+                <element signature="n#!!doc;n#addLoggedInFunctions#0" />
+                <element signature="n#!!block;n#addLoggedInFunctions#0" />
+                <element signature="n#!!doc;n#loginToExpensify#0" />
+                <element signature="n#!!block;n#loginToExpensify#0" />
+                <element signature="n#!!doc;n#simpleVerifyLogin#0" />
+                <element signature="n#!!block;n#simpleVerifyLogin#0" />
+                <element signature="n#!!doc;n#getTransactionList#0" />
+                <element signature="n#!!block;n#getTransactionList#0" />
+                <element signature="n#!!doc;n#writeDataToTable#0" />
+                <element signature="n#!!block;n#writeDataToTable#0" />
+                <element signature="n#!!doc;n#recursiveWrite#0" />
+                <element signature="n#!!block;n#recursiveWrite#0" />
+                <element signature="n#!!doc;n#pullRequiredFields#0" />
+                <element signature="n#!!block;n#pullRequiredFields#0" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#!!doc;n#createTransaction#0" />
+                <element signature="n#!!block;n#createTransaction#0" />
               </folding>
             </state>
           </provider>
@@ -91,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -99,17 +136,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="184">
               <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding>
-                <element signature="e#31#364#0#PHP" />
-                <element signature="e#306#364#0#PHP" />
-                <element signature="e#243#420#0#PHP" />
-                <element signature="e#422#702#0#PHP" />
                 <element signature="n#loginToExpensify#0;n#!!top" />
-                <element signature="e#1515#1651#0#PHP" />
                 <element signature="n#createTransaction#0;n#!!top" />
-                <element signature="e#1399#1737#0#PHP" />
                 <element signature="n#getTransactionList#0;n#!!top" />
               </folding>
             </state>
@@ -156,11 +187,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
-    <option name="y" value="25" />
+    <option name="y" value="114" />
     <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -216,14 +247,15 @@
       <workItem from="1539716759392" duration="12423000" />
       <workItem from="1539795424372" duration="9064000" />
       <workItem from="1539814420499" duration="5709000" />
+      <workItem from="1539890465828" duration="766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27380000" />
+    <option name="totallyTimeSpent" value="28146000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.4290579" />
@@ -239,7 +271,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32502708" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23185265" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -275,48 +307,76 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/proxy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="184">
           <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding>
-            <element signature="e#31#364#0#PHP" />
-            <element signature="e#306#364#0#PHP" />
-            <element signature="e#243#420#0#PHP" />
-            <element signature="e#422#702#0#PHP" />
             <element signature="n#loginToExpensify#0;n#!!top" />
-            <element signature="e#1515#1651#0#PHP" />
             <element signature="n#createTransaction#0;n#!!top" />
-            <element signature="e#1399#1737#0#PHP" />
             <element signature="n#getTransactionList#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="143" column="30" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
           <folding>
+            <element signature="e#30#98#0" />
             <element signature="e#68#468#0" />
-            <element signature="e#516#572#0" />
+            <element signature="e#643#683#0" />
+            <element signature="e#516#726#0" />
+            <element signature="n#!!doc;n#setCookie#0" />
+            <element signature="n#!!block;n#setCookie#0" />
+            <element signature="n#!!doc;n#getCookie#0" />
+            <element signature="n#!!block;n#getCookie#0" />
+            <element signature="n#!!doc;n#checkAuthToken#0" />
+            <element signature="n#!!block;n#checkAuthToken#0" />
+            <element signature="n#!!doc;n#addTransactionTable#0" />
+            <element signature="n#!!block;n#addTransactionTable#0" />
+            <element signature="n#!!doc;n#addLoginForm#0" />
+            <element signature="n#!!block;n#addLoginForm#0" />
+            <element signature="n#!!doc;n#addTransactionForm#0" />
+            <element signature="n#!!block;n#addTransactionForm#0" />
+            <element signature="n#!!doc;n#removeLoginForm#0" />
+            <element signature="n#!!block;n#removeLoginForm#0" />
+            <element signature="n#!!doc;n#removeErrorMessage#0" />
+            <element signature="n#!!block;n#removeErrorMessage#0" />
+            <element signature="n#!!doc;n#addLoggedInFunctions#0" />
+            <element signature="n#!!block;n#addLoggedInFunctions#0" />
+            <element signature="n#!!doc;n#loginToExpensify#0" />
+            <element signature="n#!!block;n#loginToExpensify#0" />
+            <element signature="n#!!doc;n#simpleVerifyLogin#0" />
+            <element signature="n#!!block;n#simpleVerifyLogin#0" />
+            <element signature="n#!!doc;n#getTransactionList#0" />
+            <element signature="n#!!block;n#getTransactionList#0" />
+            <element signature="n#!!doc;n#writeDataToTable#0" />
+            <element signature="n#!!block;n#writeDataToTable#0" />
+            <element signature="n#!!doc;n#recursiveWrite#0" />
+            <element signature="n#!!block;n#recursiveWrite#0" />
+            <element signature="n#!!doc;n#pullRequiredFields#0" />
+            <element signature="n#!!block;n#pullRequiredFields#0" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc;n#createTransaction#0" />
+            <element signature="n#!!block;n#createTransaction#0" />
           </folding>
         </state>
       </provider>
