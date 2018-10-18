@@ -87,7 +87,9 @@ function addTransactionTable(){
 }
 
 function addLoginForm() {
-    $("#loginContent").append(
+
+
+    var loginForm =
         `<!-- Add your login form here -->
     <form id="userlogin" action="proxy.php" title="Login" method="post">
         <div>
@@ -109,8 +111,12 @@ function addLoginForm() {
         <div>
             <input type="submit" id="submitButton" name="submitButton" value="Sign In">
         </div>
-    </form>`
-    );
+    </form>`;
+
+    if($("#loginContent").length == 0){
+        $(document.body).append("<div id='loginContent'></div>")
+    }
+    $("#loginContent").append(loginForm);
 }
 
 function addTransactionForm(){
@@ -234,11 +240,12 @@ function simpleVerifyLogin(success){
      }
 
  function logout(){
-    setCookie("authToken", "");
+     setCookie("authToken", "");
      removeTransactionForm();
      removeTransactionTable();
-     addLoginForm();
      removeSignOutButton();
+
+     addLoginForm();
 
  }
 
