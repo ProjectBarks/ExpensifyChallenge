@@ -317,6 +317,7 @@ function writeDataToTable(data){
     // 100      takes 261 ms.
     // 500      takes 271 ms.
     // 1000     takes 180 ms.
+    // 10000    takes 151~175ms.
     // no size  takes 175 ms.
     for (i=0,j=data.length; i<j; i+=chunk) {
         temparray = data.slice(i,i+chunk);
