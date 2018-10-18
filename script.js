@@ -311,12 +311,13 @@ function getTransactionList(){
  */
 function writeDataToTable(data){
     console.log("building insert");
-    var i,j,temparray,chunk = 1;
-    // 0 takes 175 ms.
-    // 100 takes 261 ms.
-    // 500 takes 271 ms.
-    // 1000 takes 180 ms.
-    // 10000 takes 158~168 ms.
+    var i,j,temparray,chunk = 10000;
+    // no size  takes 175 ms.
+    // 1        takes 2925 ms.
+    // 100      takes 261 ms.
+    // 500      takes 271 ms.
+    // 1000     takes 180 ms.
+    // 10000    takes 158~168 ms.
     for (i=0,j=data.length; i<j; i+=chunk) {
         temparray = data.slice(i,i+chunk);
         recursiveWrite(data, "");
