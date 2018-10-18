@@ -311,17 +311,18 @@ function getTransactionList(){
  */
 function writeDataToTable(data){
     console.log("building insert");
-    var i,j,temparray,chunk = 1000;
+    var i,j,temparray,chunk = 10000;
+    // 0 takes 175 ms.
     // 100 takes 261 ms.
     // 500 takes 271 ms.
     // 1000 takes 180 ms.
 
-    //for (i=0,j=data.length; i<j; i+=chunk) {
-    //    temparray = data.slice(i,i+chunk);
+    for (i=0,j=data.length; i<j; i+=chunk) {
+        temparray = data.slice(i,i+chunk);
         recursiveWrite(data, "");
         console.log("inserting to table");
 
-    //}
+    }
 
 
 }
